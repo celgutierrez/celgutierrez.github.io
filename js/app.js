@@ -1,4 +1,4 @@
-var app = angular.module('Portfolio', ['ui.router']);
+var app = angular.module('Portfolio', ['ui.router', 'ui.materialize']);
 
 app.config([
     '$stateProvider',
