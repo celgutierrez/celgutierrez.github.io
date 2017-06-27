@@ -2,9 +2,9 @@ var app = angular.module('Portfolio', ['ui.router']);
 
 app.config([
     '$stateProvider',
-    '$urlProvider',
-    function($stateProvider, $urlProvider) {
-        $urlProvider.otherwise('/');
+    '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
@@ -27,9 +27,6 @@ app.config([
                 url: '/404',
                 templateUrl: 'views/404.html'
             });
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
+
     }
 ]);
